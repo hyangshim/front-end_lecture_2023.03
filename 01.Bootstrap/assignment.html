@@ -10,13 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/d97fa684f7.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-        }
+        * {font-family: 'Noto Sans KR', sans-serif;}
+        a{text-decoration: none; }
 
         th {
             text-align: center;
@@ -40,38 +35,63 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">게시판</a>
+                        
+                        <a class="nav-link" href="#"><i class="fa-regular fa-clipboard"></i> 게시판</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">사용자</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user-group"></i> 사용자</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Apl's</a>
+                        <a class="nav-link dropdown-toggle" href="#"><i class="fa-solid fa-cloud-arrow-down"></i> Apl's </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">크롤링</a>
+                        <a class="nav-link dropdown-toggle" href="#"><i class="fa-solid fa-spider"></i> 크롤링</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">인공지능</a>
+                        <a class="nav-link dropdown-toggle" href="#"> <i class="fa-solid fa-brain"></i> 인공지능</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">스케쥴s</a>
+                        <a class="nav-link " href="#"><i class="fa-solid fa-calendar-days"></i> 스케쥴</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">로그아웃</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i> 로그아웃</a>
                     </li>
                 </ul>
+                <span class="navbar-text">홍길동님 환영합니다.</span>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <img src=".//png" class="rounded-circle" alt="Cinque Terre" width="100%">
+                <div style = "position: absolute;width: 250px;height: 500px;top: 80px;left: 100px;">
+                <img src="https://picsum.photos/304/236?q=1" class="rounded-circle" alt="Cinque Terre" width="100%">
                 <P>성공으로 가는 엘리베이터는 고장입니다.당신은 계단을 이용해야만 합니다. 한단계한계단씩</P>
+                <i class="fa-solid fa-envelope"></i> james2023@gmail.com<br>
+                <i class="fa-brands fa-github"></i><span style="color: blue;">james</span><br>
+                <i class="fa-brands fa-square-facebook"></i><span style="color: blue;">jamesFacebook</span>
+                <p> <i class="fa-solid fa-location-dot"></i> 용인시 수지구<span class="badge bg-secondary">날씨</span></p>
+                <button type="button" class="btn btn-outline-primary">Edit Profile</button>
             </div>
+            </div>
+            <!-- 일정표 -->
             <div class="col-9">
+                <div style = "position: absolute;width: 1200px;height: 500px;top: 80px;left: 500px;">
                 <h3>일정표</h3>
+                <div class="d-flex justify-content-between  mb-1">
+                    <div class="p-2 ">2023-03-14(목)</div>
+                      <ul class="pagination">
+                        <li class="page-item"><a  href="#"><i class="fa-solid fa-angles-left"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="page-item"><a  href="#"><i class="fa-solid fa-angle-left"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary btn-sm">2023.03</button>&nbsp;&nbsp;&nbsp;
+                        <li class="page-item"><a  href="#"><i class="fa-solid fa-angle-right"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="page-item"><a  href="#"><i class="fa-solid fa-angles-right"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                      </ul>
+                    <div class="text-primary"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fa-regular fa-clipboard"></i>
+                    </div>
+                  </div>
+                  <!-- 달력 -->
                 <table class="table table-bordered">
                     <tr>
                         <th class="text-danger">일</th>
@@ -134,7 +154,11 @@
         </div>
     </div>
 
-
+    <nav class="navbar navbar-expand-sm bg-light fixed-bottom">
+        <div class="container-fluid justify-content-center">
+            Copyright &copy; 2021-2023 CK World corp.All right reserved.
+        </div>
+    </nav>
 
 
 
