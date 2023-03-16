@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evenodd(){
+            let numtag = document.getElementById('num');
+            let numstr =numtag.value;
+            let num= Number(numstr);
+            num=Number(document.getElementById('num').value)
+
+            let restag =document.getElementById('result')
+            if(num % 2 ==1){
+                restag.innerHTML='<h4>홀수입니다.</h4>'
+            }else{
+                restag.innerHTML='<h4>짝수입니다.</h4>'
+            }
+
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <input type="text" id="num" placeholder="정수를 입력하세요">
+    <button onclick="evenodd()">확인 </button>
+<br>
+<p id="result"></p>
+   
+</body>
+</html>
