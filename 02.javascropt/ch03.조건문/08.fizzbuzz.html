@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fizzbuzz</title>
+    <script>
+        function fizzbuzz() {
+            let num = Number(document.getElementById('num').value);
+            let resTag = document.getElementById('result');
+        //     if (num % 3 == 0)
+        //         resTag.innerHTML = '<h4>fizz.</h4>';
+        //     if (num % 5 == 0)
+        //         resTag.innerHTML = '<h4>buzz.</h4>';
+        //     if (num % 15 == 0)
+        //         resTag.innerHTML = '<h4>fizzbuzz.</h4>';
+        //     else if (num % 3 == 1)
+        //         resTag.innerHTML = '<h4>정수.</h4>';
+        //     else if (num % 5 == 1)
+        //         resTag.innerHTML = '<h4>정수.</h4>';
+        //     else if (num % 15 == 1)
+        //         resTag.innerHTML = '<h4>정수.</h4>';
+        // }
+        //쌤 버전
+        let fb ;
+        if (num % 15 == 0)
+            fb = 'fizzbuzz'
+        else if (num % 3 == 0)
+            fb = 'fizz'
+        else if (num % 5 == 0)
+            fb = 'buzz'
+            else
+            fb = num;
+            resTag.innerHTML = '<h4>' + fb+ '</h4>';
+        }
+    </script>
+</head>
+
+<body style="margin: 50px;">
+    <input type="text" id="num" placeholder="정수를 입력하세요">
+    <button onclick="fizzbuzz()">확인 </button>
+    <br>
+    <p id="result"></p>
+
+</body>
+
+</html>

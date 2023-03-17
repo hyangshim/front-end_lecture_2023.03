@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drawing {
+            let dice1 = parseInt(Math.ceil(Math.random() * 6));
+            let dice2 = parseInt(Math.ceil(Math.random() * 6));
+            let dice3 = parseInt(Math.ceil(Math.random() * 6));
+            
+
+            let resTag = document.getElementById('result');
+            if(random<= 0)
+                resTag.innerHTML = `${12} ${15}입니다.`;
+            else if (minut < 45)
+                resTag.innerHTML = `${hour - 1} ${15}입니다.`;
+            else {
+                if (minut > 45)
+                    resTag.innerHTML = `${hour} ${15}입니다.`;
+            }
+        }
+    </script>
+</head>
+
+<body style="margin: 50px;">
+    <input type="text" id="주사위1" placeholder="1">
+    <input type="text" id="주사위2" placeholder="2">
+    <input type="text" id="주사위3" placeholder="3">
+    <button onclick="drawing">랜덤</button>
+    <p id="result"></p>
+</body>
+
+</html>
