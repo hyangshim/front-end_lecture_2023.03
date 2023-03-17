@@ -12,11 +12,12 @@
             let num2 = Number(document.getElementById('num2').value);
             let commondivisors = [];
             let resTag = document.getElementById('result');
-            for (let i = 1; i <= ((num1 > num2) ? num2 : num1); i++) {
+           for (let i = 1; i <= ((num1 > num2) ? num2 : num1); i++) {
                 if (num1 % i == 0 && num2 % i == 0){
                     commondivisors.push(i);
-                  }                
-        } resTag.innerHTML = `${num1},${num2}의 공약수:${commondivisors}`;
+                  }               
+        } 
+        resTag.innerHTML = `${num1},${num2}의 공약수:${commondivisors}`;
     }
     </script>
 </head>

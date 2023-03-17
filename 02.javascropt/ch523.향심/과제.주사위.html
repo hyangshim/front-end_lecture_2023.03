@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drawing() {
+            let dice1 = parseInt(Math.ceil(Math.random() * 6));
+            let dice2 = parseInt(Math.ceil(Math.random() * 6));
+            let dice3 = parseInt(Math.ceil(Math.random() * 6));
+            let resTag = document.getElementById('result');
+            let drawing = 0;
+
+            if (dice1 == dice2 && dice2 == dice3) {
+                drawing = (dice1 * 1000 + 10000);
+
+            } else if (dice1 == dice2) {
+                drawing = (dice1 * 100 + 1000);
+            } else if (dice2 == dice3) {
+                drawing = (dice2 * 100 + 1000);
+            } else if (dice1 == dice3) {
+                drawing = (dice1 * 100 + 1000);
+            } else {
+                drawing = (Math.max(dice1, dice2, dice3) * 100)
+            }
+            resTag.innerHTML = `${dice1},${dice2},${dice3}, ${drawing};`
+
+
+        }
+
+    </script>
+</head>
+
+<body style="margin: 50px;">
+    <output type="text" id="dice1" placeholder="">
+        <button onclick="drawing()">알람</button>
+        <p id="result"></p>
+</body>
+
+</html>
