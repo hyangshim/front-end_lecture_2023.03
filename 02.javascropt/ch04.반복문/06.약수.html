@@ -8,16 +8,16 @@
     <title>Document</title>
     <script>
         function Number1() {
-            let num1 = Number(document.getElementById('num1').value);
-            let num2 = Number(document.getElementById('num2').value);
+            let num5 = Number(document.getElementById('num1').value);
+            let num6 = Number(document.getElementById('num2').value);
             let commondivisors = [];
             let resTag = document.getElementById('result');
-           for (let i = 1; i <= ((num1 > num2) ? num2 : num1); i++) {
-                if (num1 % i == 0 && num2 % i == 0){
+           for (let i = 1; i <= ((num5 > num6) ? num6 : num5); i++) {
+                if (num5 % i == 0 && num6 % i == 0){
                     commondivisors.push(i);
                   }               
         } 
-        resTag.innerHTML = `${num1},${num2}의 공약수:${commondivisors}`;
+        resTag.innerHTML = `${num5},${num6}의 공약수:${commondivisors}`;
     }
     </script>
 </head>
