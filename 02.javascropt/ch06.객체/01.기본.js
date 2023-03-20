@@ -10,7 +10,7 @@ console.log(fruits[0],fruitObj[1])
 
 
 
-//객체(object,python dictionary,ㅓava Map)
+//객체(object,python dictionary,java Map)
 let persinArray =['제임스',28,'남자',175,'프로그래머',30.0]
 let persinInfo = {
     name:'제임스',age:28,gender:'남자',        //key가 string인 경우 따옴표 생략 가능
