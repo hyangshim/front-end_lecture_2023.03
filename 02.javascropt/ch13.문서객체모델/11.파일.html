@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function (index) {
+            let resTag = document.getElementById('result');
+            const path = '//c:\\progrm Files\\node js\\node.exe';
+            let index = path.lastIndexOf('\\');
+            function (filename) {
+            let filename = path.substring(index + 1);
+            console.log(filename);
+
+            let pathArray = path.split('\\');
+            console.log(pathArray[pathArray.length - 1]);
+        }
+    }
+    </script>
+</head>
+
+<body style="margin: 40px;">
+    <h3>c:\\progrm Files\\node js\\node.exe 에서 파일명만 출력하세요</h3>
+    <hr>
+    <button onclick="totalseconds()">확인</button>
+    <p id="result"></p>
+</body>
+
+</html>
