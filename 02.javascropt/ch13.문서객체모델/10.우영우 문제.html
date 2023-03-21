@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ispalindrome() {
+            let str = document.getElementById('pal').value
+            let resTag = document.getElementById('result');
+            let reverseStr = '';
+            for (let i = str.length - 1; i >= 0; i--)
+                reverseStr += str[i];
+            let ret= (str == reverseStr)?'pal ':'no pal';
+            resTag.innerHTML = ret;
+        }
+
+
+    </script>
+</head>
+
+<body style="margin: 40px;">
+    <h3>우영우</h3>
+    <hr>
+    <input type="text" id="pal">
+    <button onclick="ispalindrome()">확인</button>
+    <p id="result"></p>
+</body>
+
+</html>
