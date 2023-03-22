@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2의 제곱 배열</title>
+    <script>
+        function powerArray() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            if (num1 < 1 || num1 > 20 || num2 < 10 || num2 > 30 || num1 > num2 - 4) {
+                    alert(`정수를 다시 입력하세요`);
+                    return;
+            }
+            arr = [];
+            for (let i = num1; i <= num2; i++) {
+                arr.push(2 ** i);
+            }
+            document.getElementById('result1').innerHTML = arr;
+        }
+            </script>
+
+</head>
+<body style="margin: 50px;">
+    <input type="text" id="num1" placeholder="">
+    <input type="text" id="num2" placeholder="">
+    <button onclick="powerArray()">확인 </button>
+    <br>
+    <p id="result1"></p>
+    
+    </body>
+</html>

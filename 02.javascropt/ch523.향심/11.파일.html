@@ -9,6 +9,7 @@
     <script>
         function (index) {
             let resTag = document.getElementById('result');
+            let index = path.lastIndexOf('\\');
             const path = '//c:\\progrm Files\\node js\\node.exe';
             let index = path.lastIndexOf('\\');
             function (filename) {
@@ -23,9 +24,10 @@
 </head>
 
 <body style="margin: 40px;">
-    <h3>c:\\progrm Files\\node js\\node.exe 에서 파일명만 출력하세요</h3>
+    <h3>Q3. Filename</h3>
     <hr>
     <button onclick="totalseconds()">확인</button>
+    <input type="text" name="" id="path">
     <p id="result"></p>
 </body>
 

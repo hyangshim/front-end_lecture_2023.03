@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <script>
+        function vv() {
+            let text = document.getElementById('text1').value;
+            text = text.replace(/[',.-]/g, '');
+            text.toLowerCase();
+            arr = text.split(' ');
+            let count = 0;
+            for (let i = 0; i < text.length; i++) {
+                if (arr[i] == 'the') {
+                    count++;
+                }
+            }
+            document.getElementById('result1').innerHTML = count;
+        }
+    </script>
+
+</head>
+
+<body style="margin: 50px;">
+    <h4>Q2. the 개수</h4>
+    <input type="text" id="text1" placeholder="">
+    <button onclick="vv()">확인 </button>
+    <br>
+    <p id="result1"></p>
+    </div>
+</body>
+
+</html>
