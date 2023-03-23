@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        function zz() {
+            let input = $('#num1').val();
+            let arr = input.split(';');
+            arr.sort((a, b) => {
+                return b - a;
+            });
+        
+            $('#result1').html(arr);
+        }
+    </script>
+</head>
+
+
+
+<body style="margin: 50px;">
+    <h4>Q3.내림차순</h4>
+    <input type="text" id="num1" placeholder="">
+    <button onclick="zz()">확인</button>
+    <br>
+    <p id="result1"></p>
+    </div>
+</body>
+
+</html>
+
+let resultStr = '';
+    for (let element of newPrices)
+        resultStr += element + '<br>';
+    document.getElementById('result3').innerHTML = resultStr;

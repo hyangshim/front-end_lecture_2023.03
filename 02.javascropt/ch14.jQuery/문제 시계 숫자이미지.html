@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        function twoDigit(num) {
+            return (num < 10) ? '0' + num : String(num);
+        }
+
+        function myDatetime(date) {
+            return `${date.getFullYear()}-${twoDigit(date.getMonth() + 1)}-${twoDigit(date.getDate())} ` +
+                `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+        }
+
+        $(document).ready(function () {
+            setInterval(function () {
+                const now = new Date();
+                const week = '일월화수목금토'.split('');
+
+                let dateStr = myDatetime(now).substring(2, 10); // 2에서부터8글자 23-03-22(수)
+                dateStr += '(' + week[now.getDay()] + ')';
+                $('#date').html(dateStr);
+
+                const timeStr = myDatetime(now).substring(11, 19); // 10:46:00
+                $('#h1').attr('src', '../ch13.문서객체모델/digits/' + timeStr[0] + '.svg');
+                $('#h2').attr('src', '../ch13.문서객체모델/digits/' + timeStr[1] + '.svg');
+                $('#c1').attr('src', '../ch13.문서객체모델/digits/Colon.jpg');
+                $('#m1').attr('src', '../ch13.문서객체모델/digits/' + timeStr[3] + '.svg');
+                $('#m2').attr('src', '../ch13.문서객체모델/digits/' + timeStr[4] + '.svg');
+                $('#c2').attr('src', '../ch13.문서객체모델/digits/Colon.jpg');
+                $('#s1').attr('src', '../ch13.문서객체모델/digits/' + timeStr[6] + '.svg');
+                $('#s2').attr('src', '../ch13.문서객체모델/digits/' + timeStr[7] + '.svg');
+
+                $('#time').html(timeStr);
+            }, 1000);
+        })
+    </script>
+</head>
+
+
+
+<body style="margin: 40px;">
+    <h2 id="date"></h2>
+    <hr>
+    <h2 id="time"></h2>
+        <div>
+            <img id="h1" src="./digits/0.svg" alt="0" style="width: 100px;">
+            <img id="h2" src="./digits/0.svg" alt="0" style="width: 100px;">
+            <img id="c1" src="./digits/Colon.jpg" alt="0" style="width: 100px;">
+            <img id="m1" src="./digits/0.svg" alt="0" style="width: 100px;">
+            <img id="m2" src="./digits/0.svg" alt="0" style="width: 100px;">
+            <img id="c2" src="./digits/Colon.jpg" alt="0" style="width: 100px;">
+            <img id="s1"src="./digits/0.svg" alt="0" style="width: 100px;">
+            <img id="s2" src="./digits/0.svg" alt="0" style="width: 100px;">
+        </div>
+    
+</body>
+
+</html>
