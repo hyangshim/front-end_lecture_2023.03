@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,24 +11,30 @@
             let num1 = Number(document.getElementById('num1').value);
             let num2 = Number(document.getElementById('num2').value);
             if (num1 < 1 || num1 > 20 || num2 < 10 || num2 > 30 || num1 > num2 - 4) {
-                    alert(`정수를 다시 입력하세요`);
-                    return;
+                alert(`정수를 다시 입력하세요`);
+                return;
             }
-            arr = [];
+            let arr = [];
             for (let i = num1; i <= num2; i++) {
                 arr.push(2 ** i);
             }
-            document.getElementById('result1').innerHTML = arr;
+            //세로로 나오게 하는방법
+            let resultstr = '';
+            for (let power of arr)
+                resultstr += power + '<br>';
+            document.getElementById('result1').innerHTML = resultstr;
         }
-            </script>
+    </script>
 
 </head>
+
 <body style="margin: 50px;">
     <input type="text" id="num1" placeholder="">
     <input type="text" id="num2" placeholder="">
     <button onclick="powerArray()">확인 </button>
     <br>
     <p id="result1"></p>
-    
-    </body>
+
+</body>
+
 </html>
