@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<title>Document</title>
+
+<head>
+    <title>박스 색상 변경</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <div class="box"></div>
+            <label> Red</label>
+            <input type="range" name="points" min="0" max="255" step="1" value="0" oninput="document.getElementById('value1').innerHTML=this.value; changecolor();">
+            <span id="value1"></span>
+        </div>
+        <div>
+            <label> Green </label>
+            <input type="range" name="points" min="0" max="255" step="1" value="0" oninput="document.getElementById('value2').innerHTML=this.value; changecolor();">
+            <span id="value2"></span>
+        </div>
+        <div>
+            <label> Blue </label>
+            <input type="range" name="points" min="0" max="255" step="1" value="0" oninput="document.getElementById('value3').innerHTML=this.value; changecolor();">
+            <span id="value3"></span>
+        </div>
+    </form>
+
+    <script>
+        function changecolor() {
+            var r = document.getElementsByName("points")[0].value;
+            var g = document.getElementsByName("points")[1].value;
+            var b = document.getElementsByName("points")[2].value;
+            var rgb = "rgb(" + r + "," + g + "," + b + ")";
+            document.getElementsByClassName("box")[0].style.backgroundColor = rgb;
+        }
+    </script>
+</body>
+
+</html>
